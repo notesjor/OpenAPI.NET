@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FADB65E2-535F-48D5-9A72-DC783AF51462}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.OpenApi.DotNet452</RootNamespace>
+    <AssemblyName>Microsoft.OpenApi.DotNet452</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>mykey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Microsoft.OpenApi\Any\AnyType.cs">
+      <Link>Any\AnyType.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\IOpenApiAny.cs">
+      <Link>Any\IOpenApiAny.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\IOpenApiPrimitive.cs">
+      <Link>Any\IOpenApiPrimitive.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiArray.cs">
+      <Link>Any\OpenApiArray.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiBinary.cs">
+      <Link>Any\OpenApiBinary.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiBoolean.cs">
+      <Link>Any\OpenApiBoolean.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiByte.cs">
+      <Link>Any\OpenApiByte.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiDate.cs">
+      <Link>Any\OpenApiDate.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiDateTime.cs">
+      <Link>Any\OpenApiDateTime.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiDouble.cs">
+      <Link>Any\OpenApiDouble.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiFloat.cs">
+      <Link>Any\OpenApiFloat.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiInteger.cs">
+      <Link>Any\OpenApiInteger.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiLong.cs">
+      <Link>Any\OpenApiLong.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiNull.cs">
+      <Link>Any\OpenApiNull.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiObject.cs">
+      <Link>Any\OpenApiObject.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiPassword.cs">
+      <Link>Any\OpenApiPassword.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiPrimitive.cs">
+      <Link>Any\OpenApiPrimitive.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Any\OpenApiString.cs">
+      <Link>Any\OpenApiString.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Attributes\DisplayAttribute.cs">
+      <Link>Attributes\DisplayAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Error.cs">
+      <Link>Error.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Exceptions\OpenApiException.cs">
+      <Link>Exceptions\OpenApiException.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Exceptions\OpenApiWriterException.cs">
+      <Link>Exceptions\OpenApiWriterException.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\BodyExpression.cs">
+      <Link>Expressions\BodyExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\CompositeExpression.cs">
+      <Link>Expressions\CompositeExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\HeaderExpression.cs">
+      <Link>Expressions\HeaderExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\MethodExpression.cs">
+      <Link>Expressions\MethodExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\PathExpression.cs">
+      <Link>Expressions\PathExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\QueryExpression.cs">
+      <Link>Expressions\QueryExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\RequestExpression.cs">
+      <Link>Expressions\RequestExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\ResponseExpression.cs">
+      <Link>Expressions\ResponseExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\RuntimeExpression.cs">
+      <Link>Expressions\RuntimeExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\SourceExpression.cs">
+      <Link>Expressions\SourceExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\StatusCodeExpression.cs">
+      <Link>Expressions\StatusCodeExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Expressions\UrlExpression.cs">
+      <Link>Expressions\UrlExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Extensions\EnumExtensions.cs">
+      <Link>Extensions\EnumExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Extensions\OpenApiElementExtensions.cs">
+      <Link>Extensions\OpenApiElementExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Extensions\OpenApiExtensibleExtensions.cs">
+      <Link>Extensions\OpenApiExtensibleExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Extensions\OpenApiSerializableExtensions.cs">
+      <Link>Extensions\OpenApiSerializableExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Extensions\StringExtensions.cs">
+      <Link>Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Interfaces\IOpenApiElement.cs">
+      <Link>Interfaces\IOpenApiElement.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Interfaces\IOpenApiExtensible.cs">
+      <Link>Interfaces\IOpenApiExtensible.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Interfaces\IOpenApiExtension.cs">
+      <Link>Interfaces\IOpenApiExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Interfaces\IOpenApiReferenceable.cs">
+      <Link>Interfaces\IOpenApiReferenceable.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Interfaces\IOpenApiSerializable.cs">
+      <Link>Interfaces\IOpenApiSerializable.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\JsonPointer.cs">
+      <Link>JsonPointer.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiCallback.cs">
+      <Link>Models\OpenApiCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiComponents.cs">
+      <Link>Models\OpenApiComponents.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiConstants.cs">
+      <Link>Models\OpenApiConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiContact.cs">
+      <Link>Models\OpenApiContact.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiDiscriminator.cs">
+      <Link>Models\OpenApiDiscriminator.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiDocument.cs">
+      <Link>Models\OpenApiDocument.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiEncoding.cs">
+      <Link>Models\OpenApiEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiError.cs">
+      <Link>Models\OpenApiError.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiExample.cs">
+      <Link>Models\OpenApiExample.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiExtensibleDictionary.cs">
+      <Link>Models\OpenApiExtensibleDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiExternalDocs.cs">
+      <Link>Models\OpenApiExternalDocs.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiHeader.cs">
+      <Link>Models\OpenApiHeader.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiInfo.cs">
+      <Link>Models\OpenApiInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiLicense.cs">
+      <Link>Models\OpenApiLicense.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiLink.cs">
+      <Link>Models\OpenApiLink.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiMediaType.cs">
+      <Link>Models\OpenApiMediaType.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiOAuthFlow.cs">
+      <Link>Models\OpenApiOAuthFlow.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiOAuthFlows.cs">
+      <Link>Models\OpenApiOAuthFlows.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiOperation.cs">
+      <Link>Models\OpenApiOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiParameter.cs">
+      <Link>Models\OpenApiParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiPathItem.cs">
+      <Link>Models\OpenApiPathItem.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiPaths.cs">
+      <Link>Models\OpenApiPaths.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiReference.cs">
+      <Link>Models\OpenApiReference.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiRequestBody.cs">
+      <Link>Models\OpenApiRequestBody.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiResponse.cs">
+      <Link>Models\OpenApiResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiResponses.cs">
+      <Link>Models\OpenApiResponses.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiSchema.cs">
+      <Link>Models\OpenApiSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiSecurityRequirement.cs">
+      <Link>Models\OpenApiSecurityRequirement.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiSecurityScheme.cs">
+      <Link>Models\OpenApiSecurityScheme.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiServer.cs">
+      <Link>Models\OpenApiServer.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiServerVariable.cs">
+      <Link>Models\OpenApiServerVariable.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiTag.cs">
+      <Link>Models\OpenApiTag.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OpenApiXml.cs">
+      <Link>Models\OpenApiXml.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\OperationType.cs">
+      <Link>Models\OperationType.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\ParameterLocation.cs">
+      <Link>Models\ParameterLocation.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\ParameterStyle.cs">
+      <Link>Models\ParameterStyle.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\ReferenceType.cs">
+      <Link>Models\ReferenceType.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\RuntimeExpressionAnyWrapper.cs">
+      <Link>Models\RuntimeExpressionAnyWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Models\SecuritySchemeType.cs">
+      <Link>Models\SecuritySchemeType.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\OpenApiFormat.cs">
+      <Link>OpenApiFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\OpenApiSpecVersion.cs">
+      <Link>OpenApiSpecVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Properties\SRResource.Designer.cs">
+      <Link>Properties\SRResource.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Services\OpenApiComparer.cs">
+      <Link>Services\OpenApiComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Services\OpenApiDifference.cs">
+      <Link>Services\OpenApiDifference.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Services\OpenApiVisitorBase.cs">
+      <Link>Services\OpenApiVisitorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Services\OpenApiWalker.cs">
+      <Link>Services\OpenApiWalker.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\IValidationContext.cs">
+      <Link>Validations\IValidationContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\OpenApiValidator.cs">
+      <Link>Validations\OpenApiValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\OpenApiValidatorError.cs">
+      <Link>Validations\OpenApiValidatorError.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiComponentsRules.cs">
+      <Link>Validations\Rules\OpenApiComponentsRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiContactRules.cs">
+      <Link>Validations\Rules\OpenApiContactRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiDocumentRules.cs">
+      <Link>Validations\Rules\OpenApiDocumentRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiExtensionRules.cs">
+      <Link>Validations\Rules\OpenApiExtensionRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiExternalDocsRules.cs">
+      <Link>Validations\Rules\OpenApiExternalDocsRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiHeaderRules.cs">
+      <Link>Validations\Rules\OpenApiHeaderRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiInfoRules.cs">
+      <Link>Validations\Rules\OpenApiInfoRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiLicenseRules.cs">
+      <Link>Validations\Rules\OpenApiLicenseRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiMediaTypeRules.cs">
+      <Link>Validations\Rules\OpenApiMediaTypeRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiOAuthFlowRules.cs">
+      <Link>Validations\Rules\OpenApiOAuthFlowRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiParameterRules.cs">
+      <Link>Validations\Rules\OpenApiParameterRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiPathsRules.cs">
+      <Link>Validations\Rules\OpenApiPathsRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiResponseRules.cs">
+      <Link>Validations\Rules\OpenApiResponseRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiResponsesRules.cs">
+      <Link>Validations\Rules\OpenApiResponsesRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiRuleAttribute.cs">
+      <Link>Validations\Rules\OpenApiRuleAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiSchemaRules.cs">
+      <Link>Validations\Rules\OpenApiSchemaRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiServerRules.cs">
+      <Link>Validations\Rules\OpenApiServerRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\OpenApiTagRules.cs">
+      <Link>Validations\Rules\OpenApiTagRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\Rules\RuleHelpers.cs">
+      <Link>Validations\Rules\RuleHelpers.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\ValidationExtensions.cs">
+      <Link>Validations\ValidationExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\ValidationRule.cs">
+      <Link>Validations\ValidationRule.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Validations\ValidationRuleSet.cs">
+      <Link>Validations\ValidationRuleSet.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\FormattingStreamWriter.cs">
+      <Link>Writers\FormattingStreamWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\IOpenApiWriter.cs">
+      <Link>Writers\IOpenApiWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\OpenApiJsonWriter.cs">
+      <Link>Writers\OpenApiJsonWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\OpenApiWriterAnyExtensions.cs">
+      <Link>Writers\OpenApiWriterAnyExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\OpenApiWriterBase.cs">
+      <Link>Writers\OpenApiWriterBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\OpenApiWriterExtensions.cs">
+      <Link>Writers\OpenApiWriterExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\OpenApiYamlWriter.cs">
+      <Link>Writers\OpenApiYamlWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\Scope.cs">
+      <Link>Writers\Scope.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\SpecialCharacterStringExtensions.cs">
+      <Link>Writers\SpecialCharacterStringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Microsoft.OpenApi\Writers\WriterConstants.cs">
+      <Link>Writers\WriterConstants.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mykey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Microsoft.OpenApi\Properties\SRResource.resx">
+      <Link>Properties\SRResource.resx</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
